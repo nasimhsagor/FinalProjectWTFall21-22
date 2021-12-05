@@ -1,0 +1,1 @@
+<div class="copyright"><p>Copyright &copy; 2020-<?php echo date("Y") ?></p></div>
