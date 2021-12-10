@@ -8,11 +8,14 @@
 	<meta charset="utf-8">
 	<title>Profile</title>
 	<link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header"><h2>Online Food Ordering System</h2></strong></div>
-	<p><a href="../view/home-page.php" class="link-hvr"> Back to Home</a><p>
-	<p><a href="../view/view-menu-for-order.php" class="link-hvr">Cancel and Back to Menu</a><p>
+	<div class="header"><h2 class="glyphicon glyphicon-cutlery">  Chef's Place</h2></strong></div>
+	<p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a><p>
+	<p><a href="../view/view-menu-for-order.php" class="btn btn-warning">Cancel and Back to Menu</a><p>
 	<form action="" method="POST">
 		<table align="center">
 			<tr>
