@@ -7,8 +7,8 @@
 
 </head>
 <body>
-	<div class="header"><h2>Online Food Ordering System</h2></strong></div>
-	<p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a><p>
+	<div class="header"><h2 class="glyphicon glyphicon-cutlery"> Chef's Place</h2></strong></div>
+	<p><a href="../view/home-page.php" class="btn">Back to Home</a><p>
 	<br><br><br><br>
 	<table align="center">
 		<tr>

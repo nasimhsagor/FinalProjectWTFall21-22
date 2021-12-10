@@ -14,13 +14,13 @@ width: 550px;
 }
 </style>
 </head>
+
+<body>
+	<div class="header"><h2 class="glyphicon glyphicon-cutlery"> Chef's Place</h2></strong></div>
+	<p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a><p>
+
 <center>
 <div>
-<body>
-	<div class="header">
-        <h2>Chef's Place</h2></strong>
-    </div>
-
 	<img src="../resources/images/contact.png" alt="Contact">
 <div class="a">
 <h3>Address:   Ka-80, Kuratoli, Dhaka-1229, Bangladesh </h3>

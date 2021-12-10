@@ -10,14 +10,15 @@
     <meta charset="utf-8">
     <title>Oder Food Items</title>
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <h2>Online Food Ordering System</h2></strong>
-    </div>
+    <div class="header"><h2><span class="glyphicon glyphicon-cutlery">  Chef's Place</h2></strong></div>
     <div class="main-body">
-        <p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a>
+        <p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a><p>
         <p>
         <h1>ORDER FOOD ITEM FROM LIST</h1>
         <p>Click here to <a href="../control/logout.php" class="link-hvr">Logout</a></p>
@@ -29,7 +30,7 @@
         $userQuery=$connection->ShowItem($conn,"foodlist");     
 
         //$conn->query($sql);
-        echo "<table border='1'>
+        echo "<table class='table'>
         <tr>
             <th>ID</th>
             <th>Food Name</th>
@@ -51,9 +52,9 @@
             echo "<td>" . $row['foodname'] . "</td>";
             echo "<td>" . $row['category'] . "</td>";
             echo "<td>" . $row['description'] . "</td>";
-            echo "<td>" . $row['price']. "</td>";
-            echo "<td> <img src='../resources/food_img/$img' width='150'></td>";
-            echo "<td> <a href='../view/create-order.php?food_id=$id' class='link-hvr btn'>ORDER</a> </td>";
+            echo "<td>" . $row['price']."TK". "</td>";
+            echo "<td> <img src='../resources/food_img/$img' width='50'></td>";
+            echo "<td> <a href='../view/create-order.php?food_id=$id' class='btn btn-success'>ORDER</a> </td>";
             echo "</tr>";
           }
           echo "</table>";

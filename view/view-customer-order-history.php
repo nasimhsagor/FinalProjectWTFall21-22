@@ -9,14 +9,17 @@
     <meta charset="utf-8">
     <title>Oder Food Items</title>
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <h2>Online Food Ordering System</h2></strong>
+        <h2><span class="glyphicon glyphicon-cutlery">  Chef's Place</h2></strong>
     </div>
     <div class="main-body">
-      <p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a>
+      <p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a>
       <p>
       <h1>ORDER DETAILS</h1>
 
@@ -28,7 +31,7 @@
         $userQuery=$connection->ShowOrderHistory($conn,"orders",$customername);     
 
         //$conn->query($sql);
-        echo "<table border='1'>
+        echo "<table class='table table-dark'>
         <tr>
             <th>Order ID</th>
             <th>Customer Name</th>
@@ -57,7 +60,7 @@
             echo "<td>" . $row['payment_method']. "</td>";
             echo "<td style='color: cyan'>" . $row['status']. "</td>";
             echo "<td>" . $row['date']. "</td>";
-            echo "<td> <a href='../view/user-order-cancel.php?order_id=$order' class='link-hvr'>Cancel</a> </td>";
+            echo "<td> <a href='../view/user-order-cancel.php?order_id=$order' class='btn btn-danger'>Cancel</a> </td>";
             echo "</tr>";
           }
           echo "</table>";

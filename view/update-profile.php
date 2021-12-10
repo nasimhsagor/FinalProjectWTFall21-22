@@ -7,10 +7,13 @@
 	<meta charset="utf-8">
 	<title>Profile</title>
 	<link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header"><h2>Online Food Ordering System</h2></strong></div>
-	<p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a><p>
+	<div class="header"><h2><span class="glyphicon glyphicon-cutlery">  Chef's Place</h2></strong></div>
+	<p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a><p>
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<table align="center">
 			<tr>
@@ -56,9 +59,11 @@
 					<span id="dobErr"class="red">*</span></td>
 			</tr>
 			<tr><td><br></td></tr>
+			<table align="center">
 			<tr>
 				<td><input type="submit" name="submit" value="Update" class="btn"></td>
 			</tr>
+			</table>
 			<tr>
 				<td colspan="2"><p class="green"><?php echo $successfulMessage; ?></p></td>
 			</tr>

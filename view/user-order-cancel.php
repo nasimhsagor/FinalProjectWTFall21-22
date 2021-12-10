@@ -10,14 +10,15 @@
     <meta charset="utf-8">
     <title>cancel Order</title>
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <h2>Online Food Ordering System</h2></strong>
-    </div>
+<div class="header"><h2 class="glyphicon glyphicon-cutlery">  Chef's Place</h2></strong></div>
     <div class="main-body">
-      <p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a>
+      <p><a href="../view/home-page.php" class="btn btn-warning">Back to Home</a>
       <p>
       <h1>CANCEL ORDER</h1>
 
@@ -29,7 +30,7 @@
         $userQuery=$connection->ShowOrder($conn,"orders",$order_id);   
 
         //$conn->query($sql);
-        echo "<table border='1'>
+        echo "<table class='table'>
         <tr>
             <th>Order ID</th>
             <th>Customer Name</th>
@@ -54,7 +55,7 @@
             echo "<td>" . $row['number']. "</td>";
             echo "<td>" . $row['food_name'] . "</td>";
             echo "<td>" . $row['category'] . "</td>";
-            echo "<td>" . $row['amount'] ." TK". "</td>";
+            echo "<td>" . $row['amount'] . "</td>";
             echo "<td>" . $row['payment_method']. "</td>";
             echo "<td style='color: cyan'>" . $row['status']. "</td>";
             echo "<td>" . $row['date']. "</td>";
@@ -64,7 +65,7 @@
                           <option value='Requested ot Cancel this Order'>Cancel Order</option>
                           <option value='Refund Requested'>Refund Request</option>
                         </select>
-                        <input type='submit' name='order_update' value='Update'>
+                        <input type='submit' class='btn btn-danger' name='order_update' value='Update'>
                       </form>
                    </td>";
             echo "</tr>";
