@@ -25,6 +25,24 @@ class db
 		return $stmt; 
 	  
 	}
+	function BookingInsert($conn,$table,$eventname,$totalperson,$eventphone,$eventdate,$message)
+	{
+		$sql = "INSERT INTO $table (eventname, totalperson, eventphone, eventdate, message) VALUES (?, ?, ?, ?, ?)";
+		$stmt = $conn -> prepare($sql);
+		$stmt -> bind_param("sssss",$eventname,$totalperson,$eventphone,$eventdate,$message);
+		$stmt -> execute();  
+		return $stmt; 
+	  
+	}
+	function FeedbackInsert($conn,$table,$name,$email,$message)
+	{
+		$sql = "INSERT INTO $table (name, email, message) VALUES (?, ?, ?)";
+		$stmt = $conn -> prepare($sql);
+		$stmt -> bind_param("sss",$name,$email,$message);
+		$stmt -> execute();  
+		return $stmt; 
+	  
+	}
 	
 	// User Login and CRUD System
 	function login($conn, $table, $username, $password)
@@ -68,10 +86,10 @@ class db
 	}
 
 	
-	function CreateOrder($conn, $table,$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$date)
+	function CreateOrder($conn, $table,$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$quantity,$date)
 	{
-		$stmt = $conn->prepare("INSERT INTO $table (order_id,username, food_id, food_name, category, amount, payment_method, number, status, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt -> bind_param("ssssssssss",$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$date);
+		$stmt = $conn->prepare("INSERT INTO $table (order_id,username, food_id, food_name, category, amount, payment_method, number, status, quantity, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt -> bind_param("sssssssssss",$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$quantity,$date);
 		$stmt -> execute();  
 		$stmt -> close();
 		return $stmt; 

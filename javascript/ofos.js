@@ -59,10 +59,10 @@ function peymentGetwayValidation()
 
 function LoginValidation() 
 {
-    var username = document.getElementById("username").value;
+    var empname = document.getElementById("empname").value;
     var password = document.getElementById("password").value;
 
-    if (username == "") 
+    if (empname == "") 
     {
         document.getElementById("usernameErr").innerHTML =
         "  Please fill the username field";

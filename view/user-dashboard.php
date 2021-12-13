@@ -18,7 +18,7 @@
   <a href="../view/update-profile.php" class="btn c1">Update Profile</a>
   <a href="../view/changepassword.php" class="btn c1">Change Password</a>
   <a href="../view/booking.php"class="btn c1">Booking</a>
-  <a href="#contact"class="btn c1">Feedback</a>
+  <a href="../view/feedback.php"class="btn c1">Feedback</a>
   <a href="../view/contact.php"class="btn c1">Contact</a>
   <a href="../view/about.php"class="btn c1">About</a>
   <a href="../view/search.php"class="btn c1">Search</a>

@@ -39,6 +39,7 @@
             <th>Amount Paid</th>
             <th>Payment Method</th>
             <th>Status</th>
+            <th>Quantity</th>
             <th>Order Date</th>
             <th>Action</th>
         </tr>";
@@ -57,6 +58,7 @@
             echo "<td>" . $row['amount'] ." TK". "</td>";
             echo "<td>" . $row['payment_method']. "</td>";
             echo "<td style='color: cyan'>" . $row['status']. "</td>";
+            echo "<td>" . $row['quantity']. "</td>";
             echo "<td>" . $row['date']. "</td>";
             echo "<td> 
                       <form action='' method='post'>

@@ -7,6 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -48,6 +49,11 @@
 				<td>: <span class="green f20"> <?php echo $price ." TK"?></span>
 					<input type="hidden" name="price" id="price" value="<?php echo $price ?>">
 					<input type="hidden" name="date" id="date" value="<?php echo date('d-M-Y h:i A') ?>">
+				</td>
+			</tr>
+			<tr>
+				<td><label>Quantity </label></td>
+					<td>: <input type="number" name="quantity" id="quantity"> <span id="quantityErr" class="red">* <?php echo $payment_methodErr ?></span>
 				</td>
 			</tr>
 			<tr>

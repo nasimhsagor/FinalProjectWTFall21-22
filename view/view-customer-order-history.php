@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>Oder Food Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,6 +42,7 @@
             <th>Amount Paid</th>
             <th>Payment Method</th>
             <th>Status</th>
+            <th>Quantity</th>
             <th>Order Date</th>
             <th>Action</th>
         </tr>";
@@ -59,6 +61,7 @@
             echo "<td>" . $row['amount'] ."TK". "</td>";
             echo "<td>" . $row['payment_method']. "</td>";
             echo "<td style='color: cyan'>" . $row['status']. "</td>";
+            echo "<td>" . $row['quantity']. "</td>";
             echo "<td>" . $row['date']. "</td>";
             echo "<td> <a href='../view/user-order-cancel.php?order_id=$order' class='btn btn-danger'>Cancel</a> </td>";
             echo "</tr>";

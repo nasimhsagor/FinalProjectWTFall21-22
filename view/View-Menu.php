@@ -14,7 +14,7 @@
 
 <body>
     <div class="header">
-        <h2>Online Food Ordering System</h2></strong>
+        <h2>Chef's Place</h2></strong>
     </div>
     <div class="main-body">
       <p><a href="../view/home-page.php" class="link-hvr">← Back to Home</a>

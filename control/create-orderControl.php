@@ -40,9 +40,10 @@
 				$payment_method = $_POST['payment_method'];
 				$number = $_POST['number'];
 				$status = "New Order Placed";
+				$quantity = $_POST['quantity'];
 				$date = $_POST['date'];
 
-				$userQuery=$connection->CreateOrder($conn,"orders",$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$date);
+				$userQuery=$connection->CreateOrder($conn,"orders",$order_id,$username,$food_id, $food_name,$category,$amount,$payment_method,$number,$status,$quantity,$date);
 				$flag=1;
 				if($flag==1)
 				{

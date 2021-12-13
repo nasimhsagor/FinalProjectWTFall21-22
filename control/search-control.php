@@ -19,10 +19,11 @@ if(isset($_POST["query"]))
             <th>Description</th>
             <th>Price</th>
             <th>Image</th>
-            <th>Action</th>
         </tr>';
 	while($row = mysqli_fetch_array($result))
 	{
+		$img = $row['image'];
+		$im = "<td> <img src='../resources/food_img/$img' width='50'></td>";
 		$output .='
 			<tr>
 				<td>'.$row['id'].'</td>
@@ -30,7 +31,8 @@ if(isset($_POST["query"]))
 				<td>'.$row['category'].'</td>
 				<td>'.$row['description'].'</td>
 				<td>'.$row['price'].'</td>
-				<td>'.$row['image'].'</td>
+				<td>'.$im.'</td>
+				
 			</tr>
 		';
 	}

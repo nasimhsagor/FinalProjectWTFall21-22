@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Landing Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,11 +28,10 @@
 						}
 					?>
 				</a>
-			</div>
-			<br>
-			<div><a href="view/registration-form.php" class="btn"> Registration
+				<a href="view/registration-form.php" class="btn"> Registration
 			</a>
 			</div>
+			<br>
 		<br><br>
 		<tr>
 			<td><img src="resources/images/1.jpg" alt="Food" width="280px"></td>
